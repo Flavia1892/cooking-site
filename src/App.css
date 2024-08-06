@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-body {
+  width: 18rem;
+  height: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: linear-gradient(rgb(251, 219, 160), rgb(251, 231, 207), rgb(248, 232, 208));
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: aqua;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containerFoodCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.picture .list{
+  flex: 1;
 }
