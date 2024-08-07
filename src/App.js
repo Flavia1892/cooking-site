@@ -8,6 +8,7 @@ import HomePage from "./Pages/HomePage.js";
 import MoreRecipesPage from "./Pages/MoreRecipesPage.js";
 import Layout from "./Components/Layout.js";
 import ContainerBeefCategory from "./Pages/ContainerBeefCategory.js";
+import RecipePage from "./Pages/RecipePage.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="/morerecipespages" element={<MoreRecipesPage />} />
       <Route path="/beefpages" element={<ContainerBeefCategory />} />
       <Route path="/homepage" element={<HomePage />} />
+      <Route path="/recipepage" element={<RecipePage />} />
     </Route>
   )
 );

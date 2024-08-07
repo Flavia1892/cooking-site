@@ -10,12 +10,7 @@ function containerMoreRecipes() {
       {Meals.map((meal) => {
         return (
           <MealComponent
-            title={meal.strMeal}
-            description={meal.strArea}
-            category={meal.strCategory}
-            youtube={meal.strYoutube}
-            thumb={meal.strMealThumb}
-            key={meal.idMeal}
+            meal={meal}
           />
         );
       })}
