@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 function Navbar() {
   return (
@@ -16,7 +17,7 @@ function Navbar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a className="navbar-brand" href="#">
-          Hidden brand
+          Page 1
         </a>
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item active">
@@ -29,26 +30,24 @@ function Navbar() {
               Link
             </a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" href="#">
-              Disabled
-            </a>
+          <li>
+            
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search recipe here"
+              aria-label="Search"
+            ></input>
+          </li>
+          <li>
+            <button
+              className="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0">
-          <input
-            className="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          ></input>
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Search
-          </button>
-        </form>
       </div>
     </nav>
   );

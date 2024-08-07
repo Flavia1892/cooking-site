@@ -1,16 +1,19 @@
 import React from "react";
 import Container from "../Components/container";
 import Navbar from "../Components/Navbar";
+import ButtonMoreRecipes from "../Components/buttonMoreRecipes";
+import Footer from "../Components/Footer";
 
 function HomePage() {
   return (
     <>
-   
-      <div>
-      <Navbar/>
-        <h1>Cooking app</h1>
-      </div>
+      <title>Cooking App</title>
+
+      <Navbar />
+
       <Container />
+      <ButtonMoreRecipes />
+      <Footer/>
     </>
   );
 }

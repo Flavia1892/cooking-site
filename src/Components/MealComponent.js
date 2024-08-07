@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import "../App.css";
 
 function MealComponent({ title, description, category, youtube, tag, thumb }) {
- 
+  ////className="list-group list-group-flush"  className="list-group-item"
 
   return (
     <div>
@@ -18,10 +18,9 @@ function MealComponent({ title, description, category, youtube, tag, thumb }) {
               <img src={thumb} width={100} height={100}></img>
             </div>
             <div className="list">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item">{category}</li>
-                <li className="list-group-item">{description}</li>
-                <li className="list-group-item">{tag}</li>
+              <ul>
+                <li>{category}</li>
+                <li>{description}</li>
               </ul>
             </div>
           </div>
