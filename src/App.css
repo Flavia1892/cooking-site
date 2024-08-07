@@ -20,7 +20,6 @@
   justify-content: center;
   column-gap: 30px;
   row-gap: 30px;
-
   padding-top: 30px;
   padding-bottom: 30px;
   background-image: linear-gradient(grey, rgb(172, 169, 169), rgb(217, 213, 213), white);
@@ -38,7 +37,7 @@
 
 .buttonContainer {
   height: 100px;
-  background-color: bisque;
+  background-image: linear-gradient(to right, rgb(253, 214, 141), rgb(250, 220, 183), bisque, white);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -51,10 +50,49 @@
 
 .titlePage {
   text-align: center;
-
   font-size: 53px;
   font-weight: bold;
   background: -webkit-linear-gradient(black, rgb(48, 48, 48), rgb(221, 143, 35), rgb(225, 179, 79));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.containerSideBar {
+  display: flex;
+  width: 200px;
+  padding-right: 20px;
+  padding-top: 10px;
+  height: 100%;
+  text-align: center;
+}
+
+.containerMare {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(grey, rgb(172, 169, 169), rgb(217, 213, 213), white);
+}
+
+.styleListSideBar {
+  font-size: 20px;
+  color: black;
+  text-decoration: underline;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.styleListSideBar:hover {
+  background-color: rgb(75, 73, 73);
+  color: white;
+}
+
+ul.listSidebar {
+  list-style-type: none;
+}
+
+
+.placeHolder {
+  width: 100%;
+  height: 550px;
+  background-color: whitesmoke;
 }

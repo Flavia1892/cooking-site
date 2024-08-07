@@ -7,12 +7,15 @@ import {
 import HomePage from "./Pages/HomePage.js";
 import MoreRecipesPage from "./Pages/MoreRecipesPage.js";
 import Layout from "./Components/Layout.js";
+import ContainerBeefCategory from "./Pages/ContainerBeefCategory.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<HomePage />} />
       <Route path="/morerecipespages" element={<MoreRecipesPage />} />
+      <Route path="/beefpages" element={<ContainerBeefCategory />} />
+      <Route path="/homepage" element={<HomePage />} />
     </Route>
   )
 );

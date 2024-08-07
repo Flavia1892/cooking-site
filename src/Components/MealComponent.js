@@ -2,9 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "../App.css";
 
-function MealComponent({ title, description, category, youtube, tag, thumb }) {
-  ////className="list-group list-group-flush"  className="list-group-item"
-
+function MealComponent({ title, description, category, youtube, thumb }) {
   return (
     <div>
       <div className="card">

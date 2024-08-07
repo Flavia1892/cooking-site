@@ -1,12 +1,16 @@
 import React from "react";
 import ContainerMoreRecipes from "../Components/containerMoreRecipes";
+import PlaceHolder from "../Components/PlaceHolder";
+import ButtonToHomePage from "../Components/ButtonToHomePage";
 
 export default function MoreRecipesPage() {
   return (
     <>
-      <h1> More recipes</h1>
+      <h1 className="titlePage"> More recipes</h1>
 
       <ContainerMoreRecipes />
+      <PlaceHolder />
+      <ButtonToHomePage />
     </>
   );
 }
