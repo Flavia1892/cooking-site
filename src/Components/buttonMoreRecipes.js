@@ -1,20 +1,14 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-function ButtonMoreRecipes() {
-  function showMore() {
-    alert("Show me more recipes");
-  }
 
+function ButtonMoreRecipes() {
   return (
     <div className="buttonContainer">
-      <button
-        type="button"
-        className="btn btn-secondary btn-lg"
-        onClick={showMore}
-      >
+      <Link to="/morerecipespages" className="btn btn-secondary btn-lg">
         View more recipes
-      </button>
+      </Link>
     </div>
   );
 }

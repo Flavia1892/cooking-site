@@ -2,14 +2,12 @@ import React from "react";
 import data from "../Assets/mockdata";
 import MealComponent from "./MealComponent";
 
-function container() {
+function containerMoreRecipes() {
   let Meals = data.meals;
-  let MealsFirstShow = Meals.slice(0, 4);
 
-  console.log(MealsFirstShow);
   return (
     <div className="container-fluid">
-      {MealsFirstShow.map((meal) => {
+      {Meals.map((meal) => {
         return (
           <MealComponent
             title={meal.strMeal}
@@ -25,4 +23,4 @@ function container() {
   );
 }
 
-export default container;
+export default containerMoreRecipes;

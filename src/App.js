@@ -1,13 +1,22 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 import HomePage from "./Pages/HomePage.js";
+import MoreRecipesPage from "./Pages/MoreRecipesPage.js";
+import Layout from "./Components/Layout.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header"></header>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<HomePage />} />
+      <Route path="/morerecipespages" element={<MoreRecipesPage />} />
+    </Route>
+  )
+);
 
-      <HomePage />
-    </div>
-  );
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App;

@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -16,14 +17,14 @@ function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a className="navbar-brand" href="#">
-          Page 1
-        </a>
+        <Link className="navbar-brand" to="/morerecipespages">
+          More recipes
+        </Link>
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/">
               Home <span class="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">

@@ -23,7 +23,7 @@
 
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: linear-gradient(grey,rgb(172, 169, 169),rgb(217, 213, 213),white);
+  background-image: linear-gradient(grey, rgb(172, 169, 169), rgb(217, 213, 213), white);
 }
 
 .containerFoodCards {
@@ -35,7 +35,8 @@
 .picture .list {
   flex: 1;
 }
-.buttonContainer{
+
+.buttonContainer {
   height: 100px;
   background-color: bisque;
   width: 100%;
@@ -43,6 +44,17 @@
   justify-content: center;
   align-items: center;
 }
-.bg-body-tertiary{
-  background-image: linear-gradient(to right,rgb(253, 214, 141),rgb(250, 220, 183),bisque,white);
+
+.bg-body-tertiary {
+  background-image: linear-gradient(to right, rgb(253, 214, 141), rgb(250, 220, 183), bisque, white);
+}
+
+.titlePage {
+  text-align: center;
+
+  font-size: 53px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(black, rgb(48, 48, 48), rgb(221, 143, 35), rgb(225, 179, 79));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
