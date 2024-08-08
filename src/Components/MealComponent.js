@@ -2,17 +2,19 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
-import RecipePage from "../Pages/RecipePage";
+import data from "../Assets/mockdata";
 
 function MealComponent(meal) {
   const navigate = useNavigate();
 
+  function getId(mealobj) {
+    let id = mealobj.idMeal;
+    return id;
+  }
+
   const goToRecipePage = () => {
-    navigate("/recipepage");
-    console.log(meal.meal);
-    let titlename = meal.meal.strMeal;
-    console.log(titlename);
-    <RecipePage titleName={titlename} />;
+    let id = getId(meal.meal);
+    navigate(`/recipepage/${id}`);
   };
 
   return (

@@ -11,9 +11,9 @@ function ContainerBeefCategory() {
   return (
     <>
       <p className="titlePage">Beef Recipes</p>
-      <p class="numberOfRecipes" >
-            Number of recipes:{numberOfrecipes}
-          </p>
+
+      <p class="numberOfRecipes">Number of recipes:{numberOfrecipes}</p>
+
       <div className="containerMare">
         <div className="container-fluid">
           {Meals.map((meal) => {

@@ -20,7 +20,7 @@ const router = createBrowserRouter(
       <Route path="/beefpages" element={<ContainerBeefCategory />} />
       <Route path="/chickenpages" element={<ContainerChickenPage />} />
       <Route path="/homepage" element={<HomePage />} />
-      <Route path="/recipepage" element={<RecipePage />} />
+      <Route path='/recipepage/:id' element={<RecipePage />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )
