@@ -9,6 +9,8 @@ import MoreRecipesPage from "./Pages/MoreRecipesPage.js";
 import Layout from "./Components/Layout.js";
 import ContainerBeefCategory from "./Pages/ContainerBeefCategory.js";
 import RecipePage from "./Pages/RecipePage.js";
+import PageNotFound from "./Components/PageNotFound.js";
+import ContainerChickenPage from "./Pages/ContainerChickenPage.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,8 +18,10 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="/morerecipespages" element={<MoreRecipesPage />} />
       <Route path="/beefpages" element={<ContainerBeefCategory />} />
+      <Route path="/chickenpages" element={<ContainerChickenPage />} />
       <Route path="/homepage" element={<HomePage />} />
       <Route path="/recipepage" element={<RecipePage />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );

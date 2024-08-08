@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
 import ButtonToHomePage from "../Components/ButtonToHomePage";
 
-function RecipePage() {
+function RecipePage({ titleName }) {
+  
+  console.log({ titleName });
   return (
-    <> 
-    <h1>recipe here</h1>
-    <ButtonToHomePage />
+    <>
+      <h1>Recipe here</h1>
+
+      <h2>Title: {titleName}</h2>
+      <ButtonToHomePage />
     </>
-  )
+  );
 }
 
-export default RecipePage
+export default RecipePage;

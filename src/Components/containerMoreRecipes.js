@@ -4,17 +4,17 @@ import MealComponent from "./MealComponent";
 
 function containerMoreRecipes() {
   let Meals = data.meals;
+  let numberOfRecipes = Meals.length;
 
   return (
-    <div className="container-fluid">
-      {Meals.map((meal) => {
-        return (
-          <MealComponent
-            meal={meal}
-          />
-        );
-      })}
-    </div>
+    <>
+      <p className="numberOfRecipes" id='morePage'>Number of recipes:{numberOfRecipes}</p>
+      <div className="container-fluid">
+        {Meals.map((meal) => {
+          return <MealComponent meal={meal} />;
+        })}
+      </div>
+    </>
   );
 }
 

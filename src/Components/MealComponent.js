@@ -1,18 +1,35 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import RecipePage from "../Pages/RecipePage";
 
 function MealComponent(meal) {
- console.log(meal)
+  const navigate = useNavigate();
+
+  const goToRecipePage = () => {
+    navigate("/recipepage");
+    console.log(meal.meal);
+    let titlename = meal.meal.strMeal;
+    console.log(titlename);
+    <RecipePage titleName={titlename} />;
+  };
+
   return (
     <div>
       <div className="card">
         <div className="card-body">
           <div>
-            <Link to="/recipepage" className="card-title">
-              <h2 className="card-title">{meal.meal.strMeal}</h2>
-            </Link>
+            <h3 className="card-title">{meal.meal.strMeal}</h3>
+            <button
+              class="cardButton"
+              type="button"
+              onClick={() => {
+                goToRecipePage();
+              }}
+            >
+              Go to recipe
+            </button>
           </div>
 
           <div className="containerFoodCards">
@@ -30,7 +47,7 @@ function MealComponent(meal) {
             <a href={meal.meal.strYoutube} class="card-link">
               Youtube video link
             </a>
-            <ReactPlayer width={250} height={150} url={meal.meal.strYoutube} />
+            <ReactPlayer width={250} height={115} url={meal.meal.strYoutube} />
           </div>
         </div>
       </div>

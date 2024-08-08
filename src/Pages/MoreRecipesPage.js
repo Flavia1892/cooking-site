@@ -7,7 +7,9 @@ export default function MoreRecipesPage() {
   return (
     <>
       <h1 className="titlePage"> More recipes</h1>
-
+      <div id="buttonHomeInMore">
+        <ButtonToHomePage />
+      </div>
       <ContainerMoreRecipes />
       <PlaceHolder />
       <ButtonToHomePage />

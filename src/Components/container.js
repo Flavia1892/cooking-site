@@ -6,6 +6,7 @@ import SideBar from "./SideBar";
 function container() {
   let Meals = data.meals;
   let MealsFirstShow = Meals.slice(0, 4);
+  let numberOfRecipes = Meals.length;
   //   title={meal.strMeal}
   // description={meal.strArea}
   // category={meal.strCategory}
@@ -21,6 +22,8 @@ function container() {
         {MealsFirstShow.map((meal) => {
           return <MealComponent meal={meal} />;
         })}
+
+        <p className="numberOfRecipes">Number of recipes:{numberOfRecipes}</p>
       </div>
     </div>
   );

@@ -1,19 +1,17 @@
 import React from "react";
-import data from "../Assets/mockdataBeef";
+import data from "../Assets/MockdataChicken";
 import MealComponent from "../Components/MealComponent";
 import ButtonToHomePage from "../Components/ButtonToHomePage";
 import PlaceHolder from "../Components/PlaceHolder";
 
-function ContainerBeefCategory() {
+function ContainerChickenPage() {
   let Meals = data.meals;
   let numberOfrecipes = Meals.length;
 
   return (
     <>
-      <p className="titlePage">Beef Recipes</p>
-      <p class="numberOfRecipes" >
-            Number of recipes:{numberOfrecipes}
-          </p>
+      <p className="titlePage">Chicken Recipes</p>
+      <p class="numberOfRecipes">Number of recipes:{numberOfrecipes}</p>
       <div className="containerMare">
         <div className="container-fluid">
           {Meals.map((meal) => {
@@ -27,4 +25,4 @@ function ContainerBeefCategory() {
   );
 }
 
-export default ContainerBeefCategory;
+export default ContainerChickenPage;
