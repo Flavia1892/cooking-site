@@ -7,14 +7,9 @@ function container() {
   let Meals = data.meals;
   let MealsFirstShow = Meals.slice(0, 4);
   let numberOfRecipes = Meals.length;
-  //   title={meal.strMeal}
-  // description={meal.strArea}
-  // category={meal.strCategory}
-  // youtube={meal.strYoutube}
-  // thumb={meal.strMealThumb}
-  // key={meal.idMeal}
 
   return (
+    <>
     <div className="containerMare">
       <SideBar />
 
@@ -26,6 +21,8 @@ function container() {
         <p className="numberOfRecipes">Number of recipes:{numberOfRecipes}</p>
       </div>
     </div>
+    <h1>List of saved Recipes:</h1>
+    </>
   );
 }
 

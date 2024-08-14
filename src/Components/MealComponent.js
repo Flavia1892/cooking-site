@@ -2,6 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+import ButtonToSaveRecipe from "./ButtonToSaveRecipe";
 import data from "../Assets/mockdata";
 
 function MealComponent(meal) {
@@ -42,6 +43,9 @@ function MealComponent(meal) {
               <ul>
                 <li>{meal.meal.strCategory}</li>
                 <li>{meal.meal.strArea}</li>
+                <li>
+                  <ButtonToSaveRecipe mealID={getId(meal.meal)}/>
+                </li>
               </ul>
             </div>
           </div>

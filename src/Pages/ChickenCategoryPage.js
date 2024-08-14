@@ -4,14 +4,18 @@ import MealComponent from "../Components/MealComponent";
 import ButtonToHomePage from "../Components/ButtonToHomePage";
 import PlaceHolder from "../Components/PlaceHolder";
 
-function ContainerChickenPage() {
-  let Meals = data.meals;
+function ContainerChickenCategory() {
+  let Meals;
+  Meals = data.meals;
+
   let numberOfrecipes = Meals.length;
 
   return (
     <>
       <p className="titlePage">Chicken Recipes</p>
+
       <p class="numberOfRecipes">Number of recipes:{numberOfrecipes}</p>
+
       <div className="containerMare">
         <div className="container-fluid">
           {Meals.map((meal) => {
@@ -19,10 +23,10 @@ function ContainerChickenPage() {
           })}
         </div>
       </div>
-      <PlaceHolder />
+     
       <ButtonToHomePage />
     </>
   );
 }
 
-export default ContainerChickenPage;
+export default ContainerChickenCategory;

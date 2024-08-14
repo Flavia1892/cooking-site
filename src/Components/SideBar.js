@@ -6,15 +6,13 @@ function SideBar() {
     <div className="containerSideBar">
       <ul className="listSidebar">
         <h2>Food categories</h2>
-        <Link to="/beefpages" className="card-title">
+        <Link to="/beef" className="card-title">
           <li className="styleListSideBar">Beef</li>
         </Link>
-        <Link to="/chickenpages" className="card-title">
-          {" "}
+        <Link to="/chicken" className="card-title">
           <li className="styleListSideBar">Chicken</li>
         </Link>
-        <Link to="#" className="card-title">
-          {" "}
+        <Link to="/desserts" className="card-title">
           <li className="styleListSideBar">Dessert</li>
         </Link>
         <Link to="#" className="card-title">

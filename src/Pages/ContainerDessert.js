@@ -1,19 +1,18 @@
 import React from "react";
-import data from "../Assets/mockdataBeef";
+import data from "../Assets/mockdataDessert";
 import MealComponent from "../Components/MealComponent";
 import ButtonToHomePage from "../Components/ButtonToHomePage";
 import PlaceHolder from "../Components/PlaceHolder";
 
-function ContainerBeefCategory() {
+function ContainerDessert() {
   let Meals;
-
   Meals = data.meals;
 
   let numberOfrecipes = Meals.length;
 
   return (
     <>
-      <p className="titlePage">Beef Recipes</p>
+      <p className="titlePage">Chicken Recipes</p>
 
       <p class="numberOfRecipes">Number of recipes:{numberOfrecipes}</p>
 
@@ -24,10 +23,10 @@ function ContainerBeefCategory() {
           })}
         </div>
       </div>
-    
+
       <ButtonToHomePage />
     </>
   );
 }
 
-export default ContainerBeefCategory;
+export default ContainerDessert;

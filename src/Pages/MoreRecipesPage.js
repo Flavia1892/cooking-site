@@ -11,7 +11,7 @@ export default function MoreRecipesPage() {
         <ButtonToHomePage />
       </div>
       <ContainerMoreRecipes />
-      <PlaceHolder />
+
       <ButtonToHomePage />
     </>
   );

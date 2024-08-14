@@ -23,7 +23,7 @@ function Navbar() {
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item active">
             <Link className="nav-link" to="/morerecipespages">
-              More recipes <span class="sr-only">(current)</span>
+              More recipes <span class="sr-only"></span>
             </Link>
           </li>
           <li className="nav-item">

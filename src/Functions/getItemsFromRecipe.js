@@ -1,12 +1,20 @@
 import React from "react";
 
 let getItemsFromRecipe = function (mealObj) {
-   for(let i=1;i<=5;i++){
-    if(`${mealObj.strIngredient}${i}`)
-    console.log("Ingredient:"+`${mealObj.strIngredient}${i}`);
-if(`${mealObj.strMeasure}${i}`)
-    console.log("Quantity:"+`${mealObj.strMeasure}${i}`);
-   }
-};
+  let meal = mealObj;
+  let valuesArray = Object.values(meal);
 
+  let ingredientsArray = valuesArray.slice(9, 28);
+  let measurementsArray = valuesArray.slice(29, 48);
+
+  let finalArray = [];
+
+  for (let i = 0; i <= 20; i++) {
+    if (ingredientsArray[i] && measurementsArray[i]) {
+      finalArray.push(ingredientsArray[i] + " " + measurementsArray[i] + ",");
+    }
+  }
+
+  return finalArray;
+};
 export default getItemsFromRecipe;

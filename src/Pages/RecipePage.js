@@ -15,20 +15,32 @@ function RecipePage() {
   }
   //
   let mealObj = getRecipeData(id);
-  console.log("This is the meal object:" + mealObj);
-  GetItemsFromRecipe(mealObj);
+  let ingredientsArray = GetItemsFromRecipe(mealObj);
 
   return (
     <>
-      <h1>Recipe here</h1>
+      <h1 class="title-recipe"> {mealObj.strMeal}</h1>
+      <p id="recipe-type">
+        (Recipe type: {mealObj.strArea} {mealObj.strCategory})
+      </p>
+      <img
+        src={mealObj.strMealThumb}
+        width={300}
+        height={300}
+        class="recipe-image"
+      ></img>
+      
+      <p class="ingredients">
+        <ul>
+          List of ingredients:
+          <li>{ingredientsArray}</li>
+        </ul>
+      </p>
 
-      <h2>Title: {mealObj.strMeal}</h2>
-      <h3>{mealObj.strArea}</h3>
-      <h3>{mealObj.strCategory}</h3>
-      <h3>
+      <h3 id="instructions-title">
         Instructions:<br></br>
-        {mealObj.strInstructions}
       </h3>
+      <p class="instructions">{mealObj.strInstructions}</p>
 
       <ButtonToHomePage />
     </>
