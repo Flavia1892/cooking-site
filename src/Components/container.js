@@ -2,6 +2,7 @@ import React from "react";
 import data from "../Assets/mockdata";
 import MealComponent from "./MealComponent";
 import SideBar from "./SideBar";
+import { Link } from "react-router-dom";
 
 function container() {
   let Meals = data.meals;
@@ -10,18 +11,33 @@ function container() {
 
   return (
     <>
-    <div className="containerMare">
-      <SideBar />
+      <div className="containerMare">
+        <SideBar />
 
-      <div className="container-fluid">
-        {MealsFirstShow.map((meal) => {
-          return <MealComponent meal={meal} />;
-        })}
+        <div className="container-fluid">
+          {MealsFirstShow.map((meal) => {
+            return <MealComponent meal={meal} />;
+          })}
 
-        <p className="numberOfRecipes">Number of recipes:{numberOfRecipes}</p>
+          <p className="numberOfRecipes">Number of recipes:{numberOfRecipes}</p>
+        </div>
       </div>
-    </div>
-    <h1>List of saved Recipes:</h1>
+
+      <Link to="/favoriterecipes">
+        <button type="button" className="SavedRecipesButton">
+          List of saved Recipes
+        </button>
+      </Link>
+      <button
+        type="button"
+        className="deleteSavedRecipes SavedRecipesButton"
+        onClick={() => {
+          localStorage.clear();
+          alert("Data cleared");
+        }}
+      >
+        Delete saved Recipes
+      </button>
     </>
   );
 }

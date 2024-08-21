@@ -203,6 +203,18 @@ ul.listSidebar {
   font-size: 35px;
   padding-bottom: 15px;
 }
+.SavedRecipesButton{
+ width: 300px;
+ height: 70px;
+ background-color: bisque;
+ font-size: 25px;
+ margin-left: 30px;
+ border-radius: 50px;
+}
+.SavedRecipesButton:hover{
+  color: bisque;
+  background-color: black;
+}
 
 @media screen and (max-width: 350px) {
   .containerSideBar {
@@ -235,6 +247,9 @@ ul.listSidebar {
     font-size: 15px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .SavedRecipesButton{
+   margin-bottom: 30px;
   }
 
 }

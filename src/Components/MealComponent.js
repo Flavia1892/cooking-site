@@ -35,7 +35,7 @@ function MealComponent(meal) {
             </button>
           </div>
 
-          <div className="containerFoodCards">
+          <div className="containerFoodCards" key={meal.meal.mealID}>
             <div className="picture">
               <img src={meal.meal.strMealThumb} width={100} height={100}></img>
             </div>
@@ -44,7 +44,7 @@ function MealComponent(meal) {
                 <li>{meal.meal.strCategory}</li>
                 <li>{meal.meal.strArea}</li>
                 <li>
-                  <ButtonToSaveRecipe mealID={getId(meal.meal)}/>
+                  <ButtonToSaveRecipe mealObj={meal.meal} />
                 </li>
               </ul>
             </div>

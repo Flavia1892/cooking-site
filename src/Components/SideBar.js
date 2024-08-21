@@ -15,8 +15,8 @@ function SideBar() {
         <Link to="/desserts" className="card-title">
           <li className="styleListSideBar">Dessert</li>
         </Link>
-        <Link to="#" className="card-title">
-          {" "}
+        <Link to="*" className="card-title">
+          
           <li className="styleListSideBar">Lamb</li>
         </Link>
         <Link to="#" className="card-title">

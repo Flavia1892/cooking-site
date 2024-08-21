@@ -12,7 +12,7 @@ function ContainerDessert() {
 
   return (
     <>
-      <p className="titlePage">Chicken Recipes</p>
+      <p className="titlePage">Dessert Recipes</p>
 
       <p class="numberOfRecipes">Number of recipes:{numberOfrecipes}</p>
 
