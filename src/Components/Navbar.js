@@ -2,17 +2,18 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import data from "../Assets/mockdata";
 
 function Navbar() {
   let recipeList = data.meals;
   let [recipes, setRecipes] = useState(recipeList);
   let [searchVal, setSearchVal] = useState("");
+  let navigate = useNavigate();
 
   function handleSearchClick() {
     if (searchVal === " ") {
       setRecipes(recipeList);
-      return;
     }
 
     let filterBySearch = recipeList.filter((item) => {
@@ -60,10 +61,11 @@ function Navbar() {
                 handleSearchClick();
               }}
               onKeyDown={(e) => {
-                if (e.value === "Enter") {
-                  handleSearchClick();
-                  console.log("Click");
-                  <Link to="/searchrecipepage" state={recipes}></Link>;
+                if (e.code === "Enter") {
+                  // handleSearchClick();
+
+                   navigate("/searchrecipepage", {state:recipes});
+                  //<Link to="/searchrecipepage" state={recipes}></Link>;
                 }
               }}
               className="form-control mr-sm-2"
