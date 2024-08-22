@@ -60,9 +60,11 @@ function Navbar() {
                 handleSearchClick();
               }}
               onKeyDown={(e) => {
-                handleSearchClick();
-                console.log("Click");
-                <Link to="/searchrecipepage" state={recipes}></Link>;
+                if (e.value === "Enter") {
+                  handleSearchClick();
+                  console.log("Click");
+                  <Link to="/searchrecipepage" state={recipes}></Link>;
+                }
               }}
               className="form-control mr-sm-2"
               type="search"
