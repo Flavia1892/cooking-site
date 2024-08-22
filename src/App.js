@@ -12,6 +12,7 @@ import ContainerChickenCategory from "./Pages/ChickenCategoryPage.js";
 import ContainerDessert from "./Pages/ContainerDessert.js";
 import RecipePage from "./Pages/RecipePage.js";
 import FavoriteRecipesPage from "./Pages/FavoriteRecipesPage.js";
+import SearchedRecipesByValue from "./Pages/SearchedRecipesByValue.js";
 import PageNotFound from "./Components/PageNotFound.js";
 
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/homepage" element={<HomePage />} />
       <Route path="/recipepage/:id" element={<RecipePage />} />
       <Route path="/favoriterecipes" element={<FavoriteRecipesPage />} />
+      <Route path="/searchrecipepage" element={<SearchedRecipesByValue />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )

@@ -1,8 +1,30 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import data from "../Assets/mockdata";
 
 function Navbar() {
+  let recipeList = data.meals;
+  let [recipes, setRecipes] = useState(recipeList);
+  let [searchVal, setSearchVal] = useState("");
+
+  function handleSearchClick() {
+    if (searchVal === " ") {
+      setRecipes(recipeList);
+      return;
+    }
+
+    let filterBySearch = recipeList.filter((item) => {
+      if (
+        item.strMeal.toLocaleLowerCase().includes(searchVal.toLocaleLowerCase())
+      ) {
+        return item;
+      }
+    });
+    setRecipes(filterBySearch);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -33,6 +55,15 @@ function Navbar() {
           </li>
           <li>
             <input
+              onChange={(e) => {
+                setSearchVal(e.target.value);
+                handleSearchClick();
+              }}
+              onKeyDown={(e) => {
+                handleSearchClick();
+                console.log("Click");
+                <Link to="/searchrecipepage" state={recipes}></Link>;
+              }}
               className="form-control mr-sm-2"
               type="search"
               placeholder="Search recipe here"
@@ -40,12 +71,18 @@ function Navbar() {
             ></input>
           </li>
           <li>
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
+            <Link
+              onClick={handleSearchClick}
+              to="/searchrecipepage"
+              state={recipes}
             >
-              Search
-            </button>
+              <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

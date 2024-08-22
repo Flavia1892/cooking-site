@@ -4,7 +4,7 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 import ButtonToSaveRecipe from "./ButtonToSaveRecipe";
 
-function MealComponent(meal) {
+function MealComponents2(meal) {
   const navigate = useNavigate();
 
   function getId(mealobj) {
@@ -52,7 +52,7 @@ function MealComponent(meal) {
             <a href={meal.meal.strYoutube} class="card-link">
               Youtube video link
             </a>
-            <ReactPlayer width={250} height={115} url={meal.meal.strYoutube} />
+            <ReactPlayer width={250} height={115} url={meal.strYoutube} />
           </div>
         </div>
       </div>
@@ -60,4 +60,4 @@ function MealComponent(meal) {
   );
 }
 
-export default MealComponent;
+export default MealComponents2;
